@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +50,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .btn {
@@ -65,16 +65,16 @@ body {
 }
 
 #noButton {
-    position: relative; /* Remove absolute positioning */
+    position: relative; 
 }
 
-/* Hover effect for buttons */
+
 .btn:hover {
     background-color: rgb(248, 6, 87);
     color: #fff;
 }
 
-/* Responsive Media Queries */
+
 @media (max-width: 768px) {
     .header_text {
         font-size: 1.1rem;
@@ -100,8 +100,8 @@ body {
     }
 
     .buttons {
-        flex-direction: column; /* Stack buttons vertically on small screens */
-        align-items: center; /* Center the buttons */
+        flex-direction: column; 
+        align-items: center;
         gap: 10px;
     }
 
