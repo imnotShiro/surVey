@@ -1,257 +1,136 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    min-height: 100vh;
     background-color: rgb(189, 225, 122);
-    margin: 0;
-    padding: 0;
     font-family: 'Nunito', sans-serif;
+    padding: 20px;
 }
 
-#noButton, #yesButton {
-    position: absolute;
-    transition: 0.5s;
-}
-
-#noButton {
-    margin-left: 150px;
-}
-
-#yesButton {
-    margin-right: 150px;
-}
-
-/* Header Styling */
-.header {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #fff;
+.container {
+    max-width: 1200px;
     text-align: center;
-    margin: 20px 0 3px;
-}
-
-.txt_header {
-    font-size: 2rem;
-    color: #fff;
-    text-align: center;
-    margin: 35px 0 5px;
 }
 
 .header_text {
     font-size: 1.25rem;
-    font-weight: bold;
     color: #fff;
-    text-align: center;
-    margin: 35px 0 0;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .header_text b {
-    font-size: 1.875rem;
     color: rgb(248, 6, 87);
+    font-size: 1.5rem;
 }
 
-/* Button Styling */
-.button, .buttons {
+.header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.buttons {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    gap: 15px;
+    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
 }
 
 .btn {
-    background-color: #ffffff;
-    color: rgb(233, 48, 48);
-    padding: 15px 32px;
-    font-size: 2rem;
-    margin: 4px 2px;
-    cursor: pointer;
-    border: none;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-}
-.btns{
-    background-color: #ffffff;
+    background-color: #fff;
     color: rgb(233, 48, 48);
     padding: 15px 32px;
     font-size: 1rem;
-    margin-top: 30px;
-    margin-left: 10%;
-    cursor: pointer;
     border: none;
     border-radius: 12px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
- 
-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 25px 20px 22px;
-    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    background-color: #e8e8e8;
-    border-color: #ffe2e2;
-    border-style: solid;
-    border-width: 9px;
-    border-radius: 35px;
-    font-size: 25px;
-    cursor: pointer;
-    font-weight: 900;
-    color: rgb(134, 124, 124);
-    font-family: monospace;
-    transition:
-      transform 400ms cubic-bezier(0.68, -0.55, 0.27, 2.5),
-      border-color 400ms ease-in-out,
-      background-color 400ms ease-in-out;
-    word-spacing: -2px;
-    
-  }
-  
-  @keyframes movingBorders {
-    0% {
-      border-color: #fce4e4;
-    }
-  
-    50% {
-      border-color: #ffd8d8;
-    }
-  
-    90% {
-      border-color: #fce4e4;
-    }
-  }
-  
-  button:hover {
-    background-color: #eee;
-    transform: scale(105%);
-    animation: movingBorders 3s infinite;
-  }
-  
-  button svg {
-    margin-right: 11px;
-    fill: rgb(255, 110, 110);
-    transition: opacity 100ms ease-in-out;
-  }
-  
-  .filled {
-    position: absolute;
-    opacity: 0;
-    top: 20px;
-    left: 22px;
-  }
-  
-  @keyframes beatingHeart {
-    0% {
-      transform: scale(1);
-    }
-  
-    15% {
-      transform: scale(1.15);
-    }
-  
-    30% {
-      transform: scale(1);
-    }
-  
-    45% {
-      transform: scale(1.15);
-    }
-  
-    60% {
-      transform: scale(1);
-    }
-  }
-  
-  button:hover .empty {
-    opacity: 0;
-  }
-  
-  button:hover .filled {
-    opacity: 1;
-    animation: beatingHeart 1.2s infinite;
-  }
-  
 
-/* Gif Container */
-.gif_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#noButton {
+    position: relative; /* Remove absolute positioning */
 }
 
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-    .header {
-        font-size: 2rem; /* Tablet size adjustment */
+/* Hover effect for buttons */
+.btn:hover {
+    background-color: rgb(248, 6, 87);
+    color: #fff;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .header_text {
+        font-size: 1.1rem;
     }
 
-    .txt_header {
+    .header {
         font-size: 1.75rem;
     }
 
-    .header_text {
-        font-size: 1rem;
-    }
-
-    .btn, .btns {
-        padding: 12px 28px;
+    .btn {
+        padding: 12px 24px;
         font-size: 0.9rem;
-        margin-left: 50px; /* Reduced margin */
     }
 }
 
-@media only screen and (max-width: 480px) {
-    body {
-        flex-direction: column;
-        height: 100vh;
-        padding: 10px;
+@media (max-width: 480px) {
+    .header_text {
+        font-size: 1rem;
     }
 
     .header {
-        font-size: 1.5rem; /* Mobile size adjustment */
+        font-size: 1.5rem;
     }
 
-    .txt_header {
-        font-size: 1.25rem;
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        align-items: center; /* Center the buttons */
+        gap: 10px;
     }
 
-    .header_text {
+    .btn {
+        padding: 10px 18px;
         font-size: 0.875rem;
-    }
-
-    #noButton, #yesButton {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .btn, .btns {
-        padding: 10px 20px;
-        font-size: 0.875rem;
-        margin-left: 0;
     }
 
     img {
-        width: 90%; /* Adjust image size for mobile */
+        width: 90%;
     }
 }
 
-@media only screen and (max-width: 320px) {
-    body {
-        height: auto;
-        padding: 5px;
+@media (max-width: 320px) {
+    .header_text {
+        font-size: 0.875rem;
     }
 
-    .header_text {
-        font-size: 1rem;
+    .header {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.75rem;
     }
 
     img {
+        max-width: 100%;
         height: auto;
-        max-height: 40vh;
-    }
-
-    .btn, .btns {
-        padding: 8px 16px;
-        font-size: 0.75rem;
     }
 }
