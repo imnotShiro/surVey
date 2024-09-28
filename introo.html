@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Please?</title>
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <p class = "header_text">Hello <b>Ash</b>, we don't really know each other but I want you to know that I find you attractive and cute... This might be weird but you make heart flutter whenever I look at you. From the very first moment that I saw you, I've always admired you. Guess you've captured my heart...and.........<b>I like you</b>... But......I like the way you express yourself...I like your style..I like your vibe..and most of all your smile!</p>
+                <p class = "header"> Will you allow me to get to know you better??</p>
+            </div>
+            <div class="gif_container">
+                <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXl4OWQ3OW5mM2Y1MTF0NHN0dDE1ajQzaXYyMDIzOWI1NmlmdjgxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/b3MeXIpUFKXIypugHC/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
