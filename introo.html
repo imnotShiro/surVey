@@ -14,82 +14,22 @@
             <div class="gif_container">
                 <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXl4OWQ3OW5mM2Y1MTF0NHN0dDE1ajQzaXYyMDIzOWI1NmlmdjgxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/b3MeXIpUFKXIypugHC/giphy.gif" alt="Cute animated illustration">
             </div>
-            <div class="buttons">
-              
-             
-                <button class="btn" id="yesButton" onclick="nextPage()">
-                  <svg
-                    class="empty"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="32"
-                    height="32"
-                  >
-                    <path fill="none" d="M0 0H24V24H0z"></path>
-                    <path
-                      d="M12 2a10 10 0 0110 10 10 10 0 11-20 0A10 10 0 0112 2zm0 4a6 6 0 100 12A6 6 0 0012 6z"
-                    ></path>
-                  </svg>
-                  <svg
-                    class="filled"
-                    height="32"
-                    width="32"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M0 0H24V24H0z" fill="none"></path>
-                    <path
-                      d="M12 2a10 10 0 0110 10 10 10 0 11-20 0A10 10 0 0112 2z"
-                    ></path>
-                  </svg>
-                  Yes
-                </button>
-              
-         
-                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">
-                  <svg
-                    class="empty"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="32"
-                    height="32"
-                  >
-                    <path fill="none" d="M0 0H24V24H0z"></path>
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h2v-6h-2v6zm0-8h2V7h-2v1z"
-                    ></path>
-                  </svg>
-                  <svg
-                    class="filled"
-                    height="32"
-                    width="32"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M0 0H24V24H0z" fill="none"></path>
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h2v-6h-2v6zm0-8h2V7h-2v1z"
-                    ></path>
-                  </svg>
-                  No
-                </button>
-              
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
                 <script>
-                  function nextPage() {
-                    window.location.href = "yes.html";
-                  }
-              
-                  function moveButton() {
-                    var x =
-                      Math.random() * (window.innerWidth - document.getElementById("noButton").offsetWidth) - 85;
-                    var y =
-                      Math.random() * (window.innerHeight - document.getElementById("noButton").offsetHeight) - 48;
-                    document.getElementById("noButton").style.left = `${x}px`;
-                    document.getElementById("noButton").style.top = `${y}px`;
-                  }
-                </script>
-              </div>
-              
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
         </div>
        
     </body> 
